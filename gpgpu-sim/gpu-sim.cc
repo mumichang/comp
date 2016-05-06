@@ -1763,12 +1763,8 @@ void gpgpu_sim::relay_mf_from_mem_partition_to_compressor()
       } else assert(0);
 
 
-      //added by kh(050216)
-      if(g_hpcl_comp_config.hpcl_comp_algo == hpcl_comp_config::LOCAL_WORD_MATCHING
-      || g_hpcl_comp_config.hpcl_comp_algo == hpcl_comp_config::CPACK_WORD_MATCHING
-      || g_hpcl_comp_config.hpcl_comp_algo == hpcl_comp_config::BDI_WORD_MATCHING
-      || g_hpcl_comp_config.hpcl_comp_algo == hpcl_comp_config::FPC_WORD_MATCHING
-      || g_hpcl_comp_config.hpcl_comp_algo == hpcl_comp_config::ABPD_LOCAL_WORD_MATCHING)
+      //added by kh(050516)
+      if(g_hpcl_comp_config.hpcl_comp_algo == hpcl_comp_config::LOCAL_WORD_MATCHING)
       {
 	//added by kh(042116)
 	//get stat of read replies to the same SM in the comp_buffer
